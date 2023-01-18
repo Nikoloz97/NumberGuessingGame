@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            string UserDifficultyLevel;
+            int UserDifficultyLevel;
+
+            // TODO: Fix this issue...
 
     /*        // Stuck in do-while even if user selects 1, 2, or 3...
             do
@@ -23,70 +25,37 @@
 
 
             Console.WriteLine("Choose a difficulty level");
-            UserDifficultyLevel = Console.ReadLine();
+            UserDifficultyLevel = Convert.ToInt32(Console.ReadLine());
 
 
             // Level 1 = 1 - 10
 
-            if (UserDifficultyLevel == "1")
+            if (UserDifficultyLevel == 1)
             {
 
-            int RandomNumb = new Random().Next(1, 11);
-            Console.WriteLine("I have my number. What's your guess?");
-            int UserInput = Convert.ToInt32(Console.ReadLine());
-
-                while (UserInput != RandomNumb)
-                {
-
-                }
-
-                Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
-                
-
+                Level1.LevelOnePrompt();
 
             }
 
             // Level 2 = 1 - 100
-
-            else if (UserDifficultyLevel == "2")
+     
+            else if (UserDifficultyLevel == 2)
             {
-                int RandomNumb = new Random().Next(1, 101);
-                Console.WriteLine("I have my number. What's your guess?");
-                int UserInput = Convert.ToInt32(Console.ReadLine());
-
-                while (UserInput != RandomNumb)
-                {
-
-                }
-
-                Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
+                Level2.LevelTwoPrompt();
             }
 
             // Level 3 = 1 - 1000
 
-            else if (UserDifficultyLevel == "3")
+            else if (UserDifficultyLevel == 3)
             {
-                int RandomNumb = new Random().Next(1, 1001);
-                Console.WriteLine("I have my number. What's your guess?");
-                int UserInput = Convert.ToInt32(Console.ReadLine());
-
-                while (UserInput != RandomNumb)
-                {
-
-                }
-
-                Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
+                Level3.LevelThreePrompt();
             }
 
             
 
 
             
-            
-            
-
-
-
+           
         }
     }
 }

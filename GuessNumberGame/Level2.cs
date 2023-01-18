@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace GuessNumberGame
 {
-    internal class Level2
+    public class Level2
     {
+        public static void LevelTwoPrompt()
+        {
+            int RandomNumb = new Random().Next(1, 101);
+            Console.WriteLine("I have my number. What's your guess?");
+            int UserInput = Convert.ToInt32(Console.ReadLine());
+
+            while (UserInput != RandomNumb)
+            {
+                if (UserInput > RandomNumb)
+                {
+                    Console.WriteLine("Too high! Try again: ");
+                    UserInput = Convert.ToInt32(Console.ReadLine());
+                }
+
+                else
+                {
+                    Console.WriteLine("Too low! Try again: ");
+                    UserInput = Convert.ToInt32(Console.ReadLine());
+                }
+
+            }
+
+            Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
+        }
     }
 }
