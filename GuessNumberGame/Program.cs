@@ -33,7 +33,15 @@
 
             int RandomNumb = new Random().Next(1, 11);
             Console.WriteLine("I have my number. What's your guess?");
-            int UserInput = Console.ReadLine();
+            int UserInput = Convert.ToInt32(Console.ReadLine());
+
+                while (UserInput != RandomNumb)
+                {
+
+                }
+
+                Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
+                
 
 
             }
@@ -44,6 +52,14 @@
             {
                 int RandomNumb = new Random().Next(1, 101);
                 Console.WriteLine("I have my number. What's your guess?");
+                int UserInput = Convert.ToInt32(Console.ReadLine());
+
+                while (UserInput != RandomNumb)
+                {
+
+                }
+
+                Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
             }
 
             // Level 3 = 1 - 1000
@@ -52,6 +68,14 @@
             {
                 int RandomNumb = new Random().Next(1, 1001);
                 Console.WriteLine("I have my number. What's your guess?");
+                int UserInput = Convert.ToInt32(Console.ReadLine());
+
+                while (UserInput != RandomNumb)
+                {
+
+                }
+
+                Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
             }
 
             
