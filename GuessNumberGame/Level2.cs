@@ -18,6 +18,7 @@ namespace GuessNumberGame
 
             while (UserInput != RandomNumb)
             {
+                NumberOfGuesses++;
                 if (UserInput > RandomNumb)
                 {
                     Console.WriteLine("Too high! Try again: ");
