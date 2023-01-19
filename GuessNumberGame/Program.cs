@@ -6,26 +6,16 @@
         {
             int UserDifficultyLevel;
 
-            // TODO: Fix this issue...
-
-    /*        // Stuck in do-while even if user selects 1, 2, or 3...
-            do
-            {
-                if (UserDifficultyLevel != "1" || UserDifficultyLevel != "2" || UserDifficultyLevel != "3")
-                {
-                    Console.WriteLine("Try again. Invalid response");
-                }
-                // Prompt difficulty level 
-                Console.WriteLine("Please select a difficulty level from 1-3: ");
-                UserDifficultyLevel = Console.ReadLine();
-
-            } while (UserDifficultyLevel != "1" || UserDifficultyLevel != "2" || UserDifficultyLevel != "3");*/
 
 
-
-
-            Console.WriteLine("Choose a difficulty level");
+            Console.WriteLine("Choose a difficulty level (1-3): ");
             UserDifficultyLevel = Convert.ToInt32(Console.ReadLine());
+
+            while (UserDifficultyLevel != 1 && UserDifficultyLevel != 2 && UserDifficultyLevel != 3)
+            {
+                Console.WriteLine("Not a valid response. Try again: ");
+                UserDifficultyLevel = Convert.ToInt32(Console.ReadLine());
+            }
 
 
             // Level 1 = 1 - 10

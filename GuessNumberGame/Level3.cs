@@ -14,6 +14,8 @@ namespace GuessNumberGame
             Console.WriteLine("I have my number. What's your guess?");
             int UserInput = Convert.ToInt32(Console.ReadLine());
 
+            int NumberOfGuesses = 1;
+
             while (UserInput != RandomNumb)
             {
                 if (UserInput > RandomNumb)
@@ -30,7 +32,7 @@ namespace GuessNumberGame
 
             }
 
-            Console.WriteLine("You got it! The correct answer was: " + RandomNumb);
+            Console.WriteLine($"You got it {NumberOfGuesses} attempts! The correct answer was: " + RandomNumb);
         }
     }
 }
